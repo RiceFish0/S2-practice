@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main(){
+    int n;
+    scanf("%d", &n);
+
+    while(n--){
+        int f;
+        long long final_money=0;
+        scanf("%d", &f);
+
+        for(int i = 0; i < f; i++){
+            int farm_size,num_animals,eco_friendly;
+            scanf("%d %d %d", &farm_size, &num_animals, &eco_friendly);
+            final_money += (long long)farm_size * eco_friendly;
+        }
+        
+        printf("%lld\n", final_money);
+    }
+    
+
+    return 0;
+}

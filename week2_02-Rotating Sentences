@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+
+int main(){
+    int count = 0, max = 0;
+    char lines[100][100];
+    while(scanf("%[^\n]%*c", lines[count]) != EOF){
+        if(max < strlen(lines[count])){
+            max = strlen(lines[count]);
+        }
+        count++;
+    }
+    for(int j = 0; j < max; j++){
+        for(int i = count - 1; i >= 0; i--){
+            if(j < strlen(lines[i])){
+                printf("%c", lines[i][j]);
+            }else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
